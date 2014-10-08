@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+ 
+group='com.qulix.xcodebuild'   //Group name makes easier to manager the packages.
+version='1.0-SNAPSHOT'
+ 
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('/Users/matelskyvv/tmp/gradle_repo'))
+        }
+    }
+}
+

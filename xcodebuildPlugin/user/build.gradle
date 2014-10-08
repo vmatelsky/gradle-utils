@@ -1,0 +1,13 @@
+buildscript {
+    repositories {
+        maven {
+            url uri('/Users/matelskyvv/tmp/gradle_repo')
+        }
+    }
+    dependencies {
+        classpath group: 'com.qulix.xcodebuild', name: 'xcodebuildPlugin',
+                  version: '1.0-SNAPSHOT'
+    }
+}
+apply plugin: 'com.qulix.xcodebuild'
+
