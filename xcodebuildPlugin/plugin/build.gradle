@@ -18,7 +18,7 @@ version='1.0-SNAPSHOT'
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: uri('/Users/matelskyvv/tmp/gradle_repo'))
+            repository(url: uri(System.getProperty("user.home") + "/gradle_repo"))
         }
     }
 }

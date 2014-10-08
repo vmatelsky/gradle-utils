@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         maven {
-            url uri('/Users/matelskyvv/tmp/gradle_repo')
+            url uri(System.getProperty("user.home") + "/gradle_repo")
         }
     }
     dependencies {
@@ -9,5 +9,9 @@ buildscript {
                   version: '1.0-SNAPSHOT'
     }
 }
+
 apply plugin: 'com.qulix.xcodebuild'
 
+xcodebuild {
+    project = "UserProject.xcodeproj"
+}
